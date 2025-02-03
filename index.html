@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern 3D Photo Gallery</title>
+    <title>Elite Hair Artistry</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            text-align: center;
+            background: url('images/background.jpg') no-repeat center center/cover;
             color: white;
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         header {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.7);
             padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
             backdrop-filter: blur(10px);
+            font-size: 1.5em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
         nav a {
             margin: 0 15px;
@@ -33,53 +40,92 @@
         nav a:hover {
             color: #ffcc00;
         }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            max-width: 800px;
+        }
+        .hero h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .hero p {
+            font-size: 1.5em;
+            opacity: 0.8;
+        }
         .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             padding: 40px 20px;
+            max-width: 1000px;
         }
         .gallery img {
-            width: 250px;
-            height: 150px;
+            width: 100%;
+            height: auto;
             border-radius: 15px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
             transition: transform 0.5s, box-shadow 0.5s;
             object-fit: cover;
         }
         .gallery img:hover {
-            transform: scale(1.1) rotate(3deg);
+            transform: scale(1.1);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
         }
-        .background-effect {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100vw;
-            height: 100vh;
-            background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, rgba(0,0,0,0) 70%);
-            z-index: -1;
+        .testimonial {
+            text-align: center;
+            margin: 50px auto;
+            max-width: 700px;
+            font-style: italic;
+            font-size: 1.5em;
+            opacity: 0.8;
+        }
+        .contact {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            text-align: center;
+            width: 100%;
+            margin-top: 40px;
+        }
+        .contact h2 {
+            margin-bottom: 10px;
+        }
+        .contact a {
+            color: #ffcc00;
+            font-size: 1.2em;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    <div class="background-effect"></div>
     <header>
         <nav>
             <a href="#">Home</a>
-            <a href="#">Gallery</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
-    <div class="gallery">
-        <img src="photo1.jpg" alt="Photo 1">
-        <img src="photo2.jpg" alt="Photo 2">
-        <img src="photo3.jpg" alt="Photo 3">
-        <img src="photo4.jpg" alt="Photo 4">
-        <img src="photo5.jpg" alt="Photo 5">
+    <div class="hero">
+        <h1>Elite Hair Artistry</h1>
+        <p>Masterpieces in Hair Styling – A Reflection of Your Beauty</p>
+    </div>
+    <div class="gallery" id="gallery">
+        <img src="images/photo1.jpg" alt="Photo 1">
+        <img src="images/photo2.jpg" alt="Photo 2">
+        <img src="images/photo3.jpg" alt="Photo 3">
+        <img src="images/photo4.jpg" alt="Photo 4">
+        <img src="images/photo5.jpg" alt="Photo 5">
+    </div>
+    <div class="testimonial">
+        "An incredible experience! My hair has never looked this amazing. Professional, artistic, and simply the best. Highly recommended!" – Anna K.
+    </div>
+    <div class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>📍 г. Усть-Лабинск, ул. Линейная 2</p>
+        <p>📞 <a href="tel:+79892143958">+7 989 214-3958</a></p>
+        <p>📧 <a href="mailto:active7k@yandex.ru">active7k@yandex.ru</a></p>
     </div>
 </body>
 </html>
