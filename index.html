@@ -3,46 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Photo Gallery</title>
+    <title>Modern 3D Photo Gallery</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             text-align: center;
+            color: white;
+            overflow-x: hidden;
         }
         header {
-            background: white;
+            background: rgba(255, 255, 255, 0.1);
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             position: sticky;
             top: 0;
             z-index: 1000;
+            backdrop-filter: blur(10px);
         }
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #333;
+            color: white;
             font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00;
         }
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 10px;
-            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
         }
         .gallery img {
-            width: 100%;
-            border-radius: 10px;
-            transition: transform 0.3s;
+            width: 250px;
+            height: 150px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.5s, box-shadow 0.5s;
+            object-fit: cover;
         }
         .gallery img:hover {
-            transform: scale(1.05);
+            transform: scale(1.1) rotate(3deg);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+        }
+        .background-effect {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, rgba(0,0,0,0) 70%);
+            z-index: -1;
         }
     </style>
 </head>
 <body>
+    <div class="background-effect"></div>
     <header>
         <nav>
             <a href="#">Home</a>
@@ -52,11 +75,11 @@
         </nav>
     </header>
     <div class="gallery">
-       <img src="images/photo1.jpg" alt="Photo 1">
-       <img src="images/photo2.jpg" alt="Photo 2">
-       <img src="images/photo3.jpg" alt="Photo 3">
-       <img src="images/photo4.jpg" alt="Photo 4">
-       <img src="images/photo5.jpg" alt="Photo 5">
+        <img src="photo1.jpg" alt="Photo 1">
+        <img src="photo2.jpg" alt="Photo 2">
+        <img src="photo3.jpg" alt="Photo 3">
+        <img src="photo4.jpg" alt="Photo 4">
+        <img src="photo5.jpg" alt="Photo 5">
     </div>
 </body>
 </html>
