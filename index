@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Photo Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fa;
+            text-align: center;
+        }
+        header {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Gallery</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div class="gallery">
+        <img src="https://source.unsplash.com/random/300x300/?nature" alt="Gallery Image">
+        <img src="https://source.unsplash.com/random/301x300/?city" alt="Gallery Image">
+        <img src="https://source.unsplash.com/random/302x300/?technology" alt="Gallery Image">
+        <img src="https://source.unsplash.com/random/303x300/?architecture" alt="Gallery Image">
+        <img src="https://source.unsplash.com/random/304x300/?art" alt="Gallery Image">
+        <img src="https://source.unsplash.com/random/305x300/?landscape" alt="Gallery Image">
+    </div>
+</body>
+</html>
