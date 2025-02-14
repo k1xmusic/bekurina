@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite Hair Artistry</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -18,7 +18,7 @@
             align-items: center;
         }
         header {
-            background: rgba(0, 0, 0, 0.7);
+            background: linear-gradient(90deg, #ffcc00, #ff66b3);
             padding: 20px;
             width: 100%;
             text-align: center;
@@ -29,17 +29,18 @@
             font-size: 1.5em;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: #f5b342; /* золотистый оттенок */
+            font-family: 'Playfair Display', serif;
         }
         nav a {
             margin: 0 15px;
             text-decoration: none;
             color: white;
             font-weight: bold;
+            font-size: 1.2em;
             transition: color 0.3s;
         }
         nav a:hover {
-            color: #ffcc00;
+            color: #f5b342;
         }
         .hero {
             text-align: center;
@@ -54,17 +55,7 @@
             -webkit-background-clip: text;
             color: transparent;
             animation: gradient 5s ease infinite;
-        }
-        @keyframes gradient {
-            0% { background-position: 0%; }
-            50% { background-position: 100%; }
-            100% { background-position: 0%; }
-        }
-        .hero p {
-            font-size: 1.5em;
-            opacity: 0.9;
-            color: #f1f1f1; /* лёгкий белый оттенок */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Тень для текста */
+            font-family: 'Playfair Display', serif;
         }
         .gallery {
             display: grid;
@@ -86,16 +77,6 @@
             transform: scale(1.1);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
         }
-        .testimonial {
-            text-align: center;
-            margin: 50px auto;
-            max-width: 700px;
-            font-style: italic;
-            font-size: 1.5em;
-            opacity: 0.8;
-            color: #f1f1f1; /* светлый оттенок для текста */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Тень для текста */
-        }
         .contact {
             background: rgba(0, 0, 0, 0.7);
             padding: 40px;
@@ -111,23 +92,6 @@
             color: #ffcc00;
             font-size: 1.2em;
             text-decoration: none;
-        }
-
-        /* ✅ Медиа-запрос для адаптации под мобильные устройства */
-        @media (max-width: 768px) {
-            .gallery {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .gallery div {
-                width: 90%;
-                height: auto;
-                max-width: 500px;
-            }
-            .hero h1 {
-                font-size: 3em;
-            }
         }
     </style>
 </head>
@@ -150,9 +114,7 @@
         <div style="background-image: url('images/photo3.jpg');"></div>
         <div style="background-image: url('images/photo4.jpg');"></div>
         <div style="background-image: url('images/photo5.jpg');"></div>
-    </div>
-    <div class="testimonial">
-        "Я люблю Диму, вы не представляете, насколько сильно он меня вдохновляет на новые образы. Это лучший человек на земле! ДИМА ТЫ ЛУЧШИЙ!!!!"
+        <div style="background-image: url('images/photo6.jpg');"></div>
     </div>
     <div class="contact" id="contact">
         <h2>Контакты</h2>
